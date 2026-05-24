@@ -1,0 +1,314 @@
+/* ═══════════════════════════════════════════════════════════
+   style.css — Club Info_Tech  |  Application Web
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  background: #fff;
+  border-bottom: 4px solid #4a4de7;
+  padding: 18px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+
+/* ── Navigation ── */
+nav {
+  background: #4a4de7;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 20px;
+}
+
+nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 12px 22px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+/* ── Main Layout ── */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px 60px;
+}
+
+/* ── Cards ── */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+thead th {
+  background: #f7f8fc;
+  color: #555;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid #e8eaf0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f0f2f5;
+  transition: background 0.15s;
+}
+
+tbody tr:hover {
+  background: #fafbff;
+}
+
+tbody td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+/* ── Badges catégorie ── */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4a4de7;
+  white-space: nowrap;
+}
+
+.badge-ia   { background: #4a4de7; }
+.badge-web  { background: #4a4de7; }
+.badge-secu { background: #4a4de7; }
+
+/* ── Winner row highlight ── */
+tr.winner {
+  background: #f0fff4;
+}
+tr.winner td {
+  font-weight: 600;
+}
+.winner-icon {
+  margin-right: 6px;
+}
+
+/* ── Score bold ── */
+.score {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ── Forms ── */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 7px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+select, input[type="number"], input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #dde1ef;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  color: #333;
+  background: #fff;
+  transition: border-color 0.2s;
+  appearance: auto;
+}
+
+select:focus, input:focus {
+  outline: none;
+  border-color: #4a4de7;
+  box-shadow: 0 0 0 3px rgba(74,77,231,0.10);
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: #4a4de7;
+  color: #fff;
+}
+
+.btn-primary:hover { filter: brightness(1.1); }
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* ── Filter row ── */
+.filter-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.filter-row .form-group {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 0;
+}
+
+/* ── Alerts ── */
+.alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+
+/* ── XQuery result box ── */
+.xquery-result {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 18px 20px;
+  border-radius: 8px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #dde1ef;
+  border-radius: 8px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.88rem;
+  color: #333;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4a4de7;
+  box-shadow: 0 0 0 3px rgba(74,77,231,0.10);
+}
+
+/* ── Rang column ── */
+.rang {
+  font-weight: 700;
+  color: #4a4de7;
+  font-size: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  header h1 { font-size: 1.3rem; }
+  nav a { padding: 10px 14px; font-size: 0.84rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .card { padding: 18px; }
+}
+
+/* ── Mode indicator badge ── */
+.mode-badge {
+  font-size: 0.83rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+.mode-basex { background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+.mode-local { background: #fffbeb; color: #92400e; border: 1px solid #fcd34d; }
